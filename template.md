@@ -1,5 +1,3 @@
-# BioConductor Core Group Standards and Procedures
-
 # Title
 ## Type
 

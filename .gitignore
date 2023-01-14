@@ -1,7 +1,6 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-bground
-bioc-core-sops.Rproj
-*.html
+public/
+resources/
+node_modules/
+package-lock.json
+.hugo_build.lock
+.DS_Store 
