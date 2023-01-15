@@ -5,5 +5,5 @@
 This is a site internal to the Bioconductor Core Group. 
 It contains information on the group's compuiting infrastructure.
 
-The site is created using Hugo [tbs] and the docsy [tbs] theme.
+The site is created using Hugo [todo] and the docsy [todo] theme.
 

@@ -1,13 +1,9 @@
 ---
 date: 2023-01-13
-title: "Our first SOP"
-linkTitle: "First SOP"
-description: "Description [TBS]"
-author: "Bobby D Shea @rdshear [slack address goes here]"
-resources:
-- src: "**.{png,jpg}"
-  title: "Image #:counter"
+title: "TODO"
+linkTitle: "TODO"
+description: "[TODO]"
+author: "TODO Name and [slack address goes here]"
 ---
 
-## The lead
-[TBS]
+## [TODO]
