@@ -20,7 +20,7 @@ The login servers names are published by DNS and generally accessible on port 22
 
 Users are authorized by SSH key.
 To become an authorized user, provide your public SSH key to Jennifer Wokaty (TODO Name-by-role).
-She will forward it to Nikos George at DFCI (TODO Name-by-role).
+They will forward it to Nikos George at DFCI (TODO Name-by-role).
 He will use this key to grant you access to the DFCI login servers as well as the builders.
 
 If you are unfamiliar with SSH key, [this](https://sites.google.com/ds.dfci.harvard.edu/docs-ds/servers-hpc/server-access-ssh) page may be helpful.
