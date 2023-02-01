@@ -9,7 +9,7 @@ menu:
 ---
 
 {{% pageinfo %}}
-pageinfo section [TODO]
+More content coming to this page soon.
 {{% /pageinfo %}}
 
 Introduction to SOPs

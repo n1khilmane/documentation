@@ -14,10 +14,4 @@ description: >
 
 [Bitwarden Authenticator (TOTP)](https://bitwarden.com/help/authenticator-keys/)
 
-TODO Make movie of setting up a site + TOTP
-
-Allowing autofill & launch in Chrome?
-
-Where to put recovery codes?
-
 Hiding Passwords [Granular access control](https://bitwarden.com/help/user-types-access-control/#granular-access-control)

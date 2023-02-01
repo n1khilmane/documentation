@@ -7,7 +7,7 @@ description: >
 ---
 
 {{% pageinfo %}}
-Pageinfo [TODO]
+This is a placeholder
 {{% /pageinfo %}}
 
 [TODO]

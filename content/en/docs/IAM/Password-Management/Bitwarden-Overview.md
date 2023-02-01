@@ -50,3 +50,11 @@ Bitwarden is based on a "zero-knowledge" architecure. Secrets stored in your Bit
     - MSFT Edge
     - DuckDuckGo for Mac
     - Others
+
+## Further Reading
+
+- [Bitwarden Security Whitepaper](https://bitwarden.com/help/bitwarden-security-white-paper/)
+- [Onboarding and Succession](https://bitwarden.com/help/onboarding-and-succession)
+- [About Collections](https://bitwarden.com/help/about-collections/)
+- [About Groups](https://bitwarden.com/help/about-groups)
+- [Sharing](https://bitwarden.com/help/sharing/)

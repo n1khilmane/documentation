@@ -6,7 +6,7 @@ weight: 90
 ---
 
 {{% pageinfo %}}
-pageinfo section [TODO]
+This is a placeholder
 {{% /pageinfo %}}
 
 TODO 
