@@ -15,12 +15,12 @@ jobs:
           submodules: true
       - name: Installing Hugo 0.109.0
         run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb
+          wget -q https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb
           sudo dpkg -i hugo_extended_0.109.0_linux-amd64.deb
           hugo version
+          ls -l
       - name: Building site
         run: |
-          cd ./src
           hugo --minify
       - name: Deploy
         id: builddeploy
