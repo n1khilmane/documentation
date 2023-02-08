@@ -1,0 +1,30 @@
+{
+    "routes": [
+        {
+            "route": "/login",
+            "redirect": "/.auth/login/github"
+        },
+        {
+            "route": "/.auth/login/twitter",
+            "statusCode": 404
+        },
+        {
+            "route": "/.auth/login/aad",
+            "statusCode": 404
+        },
+        {
+            "route": "/logout",
+            "redirect": ".auth/logout"
+        },
+        {
+            "route": "/*",
+            "allowedRoles": ["verified"]
+        }
+    ],
+    "responseOverrides": {
+        "401": {
+            "statusCode": 302,
+            "redirect": "/.auth/login/github"
+        }
+    }
+}
