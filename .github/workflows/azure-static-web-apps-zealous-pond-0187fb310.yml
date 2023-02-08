@@ -18,7 +18,7 @@ jobs:
           wget -q https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb
           sudo dpkg -i hugo_extended_0.109.0_linux-amd64.deb
           hugo version
-          ls -l
+          npm install postcss-cli
       - name: Building site
         run: |
           hugo --minify
