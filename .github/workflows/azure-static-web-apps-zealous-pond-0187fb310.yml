@@ -17,8 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          submodules: recursive
-          fetch-depth: 0          
+          submodules: true
       - name: Setup Docsy
         run: git submodule update --init --recursive && sudo npm install -D --save autoprefixer && sudo npm install -D --save postcss-cli
        - name: Build And Deploy
