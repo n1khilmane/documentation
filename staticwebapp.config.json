@@ -9,6 +9,11 @@
             "statusCode": 404
         },
         {
+            "route": "/.auth/invitations/accept",
+            "allowedRoles": ["anaonymous", "authenticated", "verified"]
+        },
+
+        {
             "route": "/.auth/login/aad",
             "statusCode": 404
         },
