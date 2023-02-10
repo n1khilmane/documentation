@@ -8,7 +8,7 @@ defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
@@ -180,6 +180,12 @@ enable = false
   url = "https://devteam-bioc.slack.com"
   icon = "fab fa-slack"
   desc = "Chat with other project developers"
+
+# main menu items with external links
+[[menu.main]]
+    name = "logout"
+    weight = 99
+    url = "/logout"
 
 # hugo module configuration
 
