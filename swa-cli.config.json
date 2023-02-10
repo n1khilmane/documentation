@@ -1,0 +1,15 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "bioc-core-sops": {
+      "appLocation": ".",
+      "outputLocation": "public",
+      "appBuildCommand": "hugo -D",
+      "run": "hugo server -D",
+      "appName": "bioc-core-sops-lcl",
+      "resourceGroup": "bioc-core-sops-lcl-rg",
+      "apiPort": 3000,
+      "port": 3000
+    }
+  }
+}

@@ -10,9 +10,8 @@ title: "Login"
 
 ####
 
-### [Azure Active Directory (Microsoft)]("/.auth/login/AAD")
+### [Azure Active Directory (Microsoft)](/.auth/login/aad)
 
+### [Github](/.auth/login/github)
 
-### [Github]("/.auth/login/github")
-
-### [Google]("/.auth/login/google")
+### [Google](/.auth/login/google)
