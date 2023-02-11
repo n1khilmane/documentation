@@ -16,22 +16,7 @@
             "route": "/favicon/*"
         },
         {
-            "route": "/.auth/login/github"
-        },
-        {
-            "route": "/.auth/login/google"
-        },
-        {
-            "route": "/.auth/login/aad"
-        },
-        {
-            "route": "/.auth/invitations/accept"
-        },
-        {
-            "route": "/.auth/logout"
-        },
-        {
-            "route": "/.auth/me"
+            "route": "/.auth/*"
         },
         {
             "route": "/login/"
