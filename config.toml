@@ -185,7 +185,7 @@ enable = false
 [[menu.main]]
     name = "logout"
     weight = 99
-    url = "/.auth/logout"
+    url = "/.auth/logout?post_login_redirect_uri=/login"
 
 # hugo module configuration
 
