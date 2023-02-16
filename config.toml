@@ -183,9 +183,9 @@ enable = false
 
 # main menu items with external links
 [[menu.main]]
-    name = "logout"
+    name = "Logout"
     weight = 99
-    url = "/.auth/logout?post_login_redirect_uri=/login"
+    url = "/.auth/logout?post_login_redirect_uri=%2Floggedout"
 
 # hugo module configuration
 
