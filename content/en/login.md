@@ -10,8 +10,8 @@ title: "Login"
 
 ####
 
-### [Azure Active Directory (Microsoft)](/.auth/login/aad)
-
-### [Github](/.auth/login/github?post_login_redirect_uri={{< ref "/" >}})
+### [Github (Recommended)](/.auth/login/github?post_login_redirect_uri={{< ref "/" >}})
 
 ### [Google](/.auth/login/google)
+
+### [Azure Active Directory (Microsoft)](/.auth/login/aad)
