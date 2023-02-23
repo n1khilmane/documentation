@@ -11,3 +11,5 @@ Pageinfo [TODO]
 {{% /pageinfo %}}
 
 [TODO]
+
+Hiding Passwords [Granular access control](https://bitwarden.com/help/user-types-access-control/#granular-access-control)
