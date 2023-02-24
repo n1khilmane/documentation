@@ -12,5 +12,5 @@ Date. 01-24-2020.
 
 The document is the grant proposal that was reviewed in 2021 and funded for 2022-2026.  The document can be examined by team members to review the commitments made in the proposal. 
 
-{{< pdf src="./scienceU24.pdf" width="100%" height="800px" >}}
+{{< pdf src="/doclib/scienceU24.pdf" width="100%" height="800px" >}}
 
