@@ -10,4 +10,4 @@ description: Project Documents for Internal Use Only
 
 Date. 01-24-2020.
 
-Here's what we said in our TODO proposal. You should read it because TODO.
+The document is the grant proposal that was reviewed in 2021 and funded for 2022-2026.  The document can be examined by team members to review the commitments made in the proposal. 

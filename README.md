@@ -65,3 +65,8 @@ When you choose your login provider, you will then be presented with a page from
 
 TODO - Fill in and add screen shot.
 Select any user name. Add the role `verified` to the User's roles text box.
+
+## Acknowledgements
+
+hugo
+docsy
