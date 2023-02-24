@@ -4,8 +4,8 @@
     "bioc-core-sops": {
       "appLocation": ".",
       "outputLocation": "public",
-      "appBuildCommand": "hugo -D --cleanDestinationDir",
-      "run": "hugo server -D --cleanDestinationDir",
+      "appBuildCommand": "hugo --cleanDestinationDir",
+      "run": "hugo server --cleanDestinationDir",
       "appName": "bioc-core-sops",
       "resourceGroup": "bioc-core-sops",
       "apiPort": 3000,
