@@ -1,0 +1,21 @@
+<table>
+       <thead>
+       <tr>
+       <th style="text-align:left">Name</th>
+       <th style="text-align:left">GithubId</th>
+       <th style="text-align:left">Email</th>
+       <th style="text-align:left">SlackId</th>
+       </tr>
+       </thead>
+       <tbody>
+       {{ range .Site.Data.members }}
+       <tr>
+              <td style="text-align:left">{{ .name }}</td>
+              <td style="text-align:left">{{ .GithubId }}</td>
+              <td style="text-align:left">
+                     <a href="mailto:{{ .Email }}">{{ .Email }}</a></td>
+              <td style="text-align:left">{{ .SlackId }}</td>
+       </tr>
+              {{ end }}
+       </tbody>
+</table>

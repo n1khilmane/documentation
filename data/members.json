@@ -1,0 +1,50 @@
+[
+    {
+      "name": "Vince Carey",
+      "GithubId": "vjcitn",
+      "Email": "stvjc@channing.harvard.edu",
+      "SlackId": "@stvjc"
+    },
+    {
+      "name": "Kayla Interdonato",
+      "GithubId": "Kayla-Morrell",
+      "Email": "kayla.morrell@roswellpark.org",
+      "SlackId": "@Kayla Interdonato"
+    },
+    {
+      "name": "Alexandru Mahmoud",
+      "GithubId": "almahmoud",
+      "Email": "mahmoudalexandru@gmail.com",
+      "SlackId": "@Alex Mahmoud "
+    },
+    {
+      "name": "Hervé Pagès",
+      "GithubId": "hpages",
+      "Email": "hpages.on.github@gmail.com",
+      "SlackId": "@hpages "
+    },
+    {
+      "name": "Marcel Ramos",
+      "GithubId": "LiNk-NY",
+      "Email": "marcel.ramosperez@roswellpark.org",
+      "SlackId": "@mramos"
+    },
+    {
+      "name": "Robert Shear",
+      "GithubId": "rdshear",
+      "Email": "rshear@ds.dfci.harvad.edu",
+      "SlackId": "@rdshear"
+    },
+    {
+      "name": "Lori Shepherd",
+      "GithubId": "lshep",
+      "Email": "lori.shepherd@roswellpark.org",
+      "SlackId": "@lshepherd "
+    },
+    {
+      "name": "Jennifer Wokaty",
+      "GithubId": "jwokaty",
+      "Email": "jennifer.wokaty@gmail.com",
+      "SlackId": "@Jennifer Wokaty "
+    }
+  ]

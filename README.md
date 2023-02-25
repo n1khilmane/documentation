@@ -68,8 +68,9 @@ Select any user name. Add the role `verified` to the User's roles text box.
 
 ## Acknowledgements
 
+The following components are incorporated into this repository. See the Repo links in the caption below for authorship and license information.
+
 | Component | Repo |
 |-----------|------|
 | hugo | https://github.com/gohugoio/hugo |
 | docsy | https://github.com/google/docsy/ |
-| hugo-pdf shortcode | https://github.com/sytranvn/hugo-pdf |

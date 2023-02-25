@@ -1,18 +1,7 @@
 ---
-title: "Contacts"
-linkTitle: "Contacts"
+title: "Bioc Core Team"
 weight: 10
 description: >
-  Contacts by Role
+  Core Team Contact Information
 ---
-
-TODO define roles, contacts
-
-## Contacts
-
-|Role|Primary <br> Contact | Secondary <br> Contacts |
-|--------------------|---------------|------------------|
-|bioc-core-sops Site Content Manager |Robert Shear|Lori Shepherd <br> Vince Cary|
-|Bitwarden Admin|Lori Shepherd|TODO|
-
-[TODO] Contacts --> hyperlink (slack?)
+{{< member-table >}}
