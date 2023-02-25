@@ -8,3 +8,4 @@ Icon?
 .vscode/
 
 .env
+bioc-core-sops.code-workspace
