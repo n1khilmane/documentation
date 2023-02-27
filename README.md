@@ -14,7 +14,14 @@ It is surfaced in Azure as a [Static Web App](https://learn.microsoft.com/en-us/
 
 ## Adding Content
 
-TODO
+Most content on this site is markdown but [other formats are supported](https://gohugo.io/content-management/formats/). 
+Metadata about the page is stored with the page as [Front Matter](https://gohugo.io/content-management/front-matter/).
+
+These pages are organized accoording  to (`docsy` conventions)[https://www.docsy.dev/docs/adding-content/content/].
+Where images or other resources are needed to support a page, they page and its supporting files are organied in a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles).
+
+The site uses the Hugo [data folder](https://gohugo.io/templates/data-templates/#the-data-folder) to support support data sources for tables and lists that are subject to change.
+Specifically table of members of the core group, which is stored at `data/members.json`.
 
 ### Installation
 
@@ -62,8 +69,6 @@ The site is available at http://localhost:1313.
 A version of the site that emulates authentication is simultaeously available at http://localhost:3000.
 If you use the authentication emulator, you will land on the login page.
 When you choose your login provider, you will then be presented with a page from the emulator.
-
-TODO - Fill in and add screen shot.
 Select any user name. Add the role `verified` to the User's roles text box.
 
 ## Acknowledgements
