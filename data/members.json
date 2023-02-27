@@ -18,6 +18,12 @@
       "SlackId": "@Alex Mahmoud "
     },
     {
+      "name": "Martin Morgan",
+      "GithubId": "mtmorgan",
+      "Email": "martin.morgan@roswellpark.org",
+      "SlackId": "@mtmorgan"
+    },
+    {
       "name": "Hervé Pagès",
       "GithubId": "hpages",
       "Email": "hpages.on.github@gmail.com",
