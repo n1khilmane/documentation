@@ -1,0 +1,41 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "staticSites_bioc_core_sops_name": {
+            "defaultValue": "bioc-core-sops",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Web/staticSites",
+            "apiVersion": "2022-03-01",
+            "name": "[parameters('staticSites_bioc_core_sops_name')]",
+            "location": "Central US",
+            "sku": {
+                "name": "Standard",
+                "tier": "Standard"
+            },
+            "properties": {
+                "repositoryUrl": "[concat('https://github.com/Bioconductor/', parameters('staticSites_bioc_core_sops_name'))]",
+                "branch": "main",
+                "stagingEnvironmentPolicy": "Enabled",
+                "allowConfigFileUpdates": true,
+                "provider": "GitHub",
+                "enterpriseGradeCdnStatus": "Disabled"
+            }
+        },
+        {
+            "type": "Microsoft.Web/staticSites/customDomains",
+            "apiVersion": "2022-03-01",
+            "name": "[concat(parameters('staticSites_bioc_core_sops_name'), '/coresops.bioconductor.org')]",
+            "location": "Central US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/staticSites', parameters('staticSites_bioc_core_sops_name'))]"
+            ],
+            "properties": {}
+        }
+    ]
+}
