@@ -57,7 +57,7 @@ ssh -A -J rfranklin@ada.dfci.harvard.edu biocbuild@155.52.47.135
 |------|---------|-------|
 |biocbuild | TODO ||
 |pkgbuild| TODO ||
-|biocpush| TODO | bebbiolos* only |
+|biocpush| TODO | nebbiolos* only |
 
 ### Revoking Builder User Access
 
