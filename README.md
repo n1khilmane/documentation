@@ -33,7 +33,15 @@ Install and start [Docker Desktop](https://docs.docker.com/desktop/).
 
 #### Hugo
 
-Install Hugo, by following the [Hugo Installation Instructions](https://gohugo.io/installation/). For macOS,
+Install Hugo, by following the [Hugo Installation Instructions](https://gohugo.io/installation/). 
+
+This requires prequisites `npm` and go `golang`. In addition, the following shell code must be run once from the project rooot directory.
+
+```
+git submodule update --init --recursive && npm install -D --save autoprefixer && npm install -D --save postcss-cli
+```
+
+The simplest installation of `hugo` For macOS is `homebrew`.
 ```
 brew install hugo
 ```
