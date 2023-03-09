@@ -14,11 +14,21 @@ It is surfaced in Azure as a [Static Web App](https://learn.microsoft.com/en-us/
 
 ## Adding Content
 
+### General Content Structure
 Most content on this site is markdown but [other formats are supported](https://gohugo.io/content-management/formats/). 
 Metadata about the page is stored with the page as [Front Matter](https://gohugo.io/content-management/front-matter/).
 
 These pages are organized accoording  to (`docsy` conventions)[https://www.docsy.dev/docs/adding-content/content/].
 Where images or other resources are needed to support a page, they page and its supporting files are organied in a [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles).
+
+### PDF Documents
+
+The directory `static/doclib` is the designated location for PDF documents to be surfaced in the browser. This is accomplished in the markdown pages with the PDF shortcode. FOr example, to display the document `scienceU24.pdf`, 
+```
+{{< pdf src="/doclib/scienceU24.pdf" width="100%" height="800px" >}}
+```
+
+### Variable Data Sources
 
 The site uses the Hugo [data folder](https://gohugo.io/templates/data-templates/#the-data-folder) to support support data sources for tables and lists that are subject to change.
 Specifically table of members of the core group, which is stored at `data/members.json`.
