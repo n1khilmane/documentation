@@ -1,0 +1,38 @@
+<table>
+       <thead>
+              <tr>
+                     <th style="text-align:left">Tag</th>
+                     <th style="text-align:left">Topic</th>
+                     <th style="text-align:left">Type</th>
+                     <th style="text-align:left">Format</th>
+                     <th style="text-align:left">Title</th>
+              </tr>
+       </thead>
+       <tbody>
+              {{ range $id, $val := .Site.Data.resource_tags.properties }}
+              <tr>
+                     <td style="text-align:left">{{ $id }}</td>
+                     <td style="text-align:left">{{ $val.topic }}</td>
+                     <td style="text-align:left">{{ $val.type }}</td>
+                     <td style="text-align:left">{{ $val.format }}
+                    </td>
+                     <td style="text-align:left">{{ $val.title }}</td>
+              </tr>
+              {{ with $val.enum }}
+              <td></td>
+              <td style="text-align:right">enum:</td>
+              <td colspan="3" style="text-align:left">{{ $val.enum }}</td>
+              {{ end }}
+
+
+              <tr>
+                     <td style="text-align:left">description</td>
+                     <td style="text-align:left" , colspan="4">{{ $val.description }}</td>
+              </tr>
+              <tr>
+                     <td style="text-align:left">Example</td>
+                     <td style="text-align:left" , colspan="4">{{ $val.examples | jsonify }} </td>
+              </tr>
+              {{ end }}
+       </tbody>
+</table>

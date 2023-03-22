@@ -1,0 +1,129 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "bioc:owner": {
+            "title": "User responsible for this resource",
+            "description": "The user's IAM user name with the suffix @bioconductor.",
+            "topic": "roles",
+            "type": "string",
+            "examples": [
+                {
+                    "bioc:owner": "lori.sheperd@bioconductor"
+                }
+            ]
+        },
+        "bioc:creator": {
+            "title": "User who created this resource, if created manually",
+            "description": "The user's IAM user name with the suffix @bioconductor.",
+            "topic": "roles",
+            "type": "string",
+            "examples": [
+                {
+                    "bioc:creator": "lori.sheperd@bioconductor"
+                }
+            ]
+        },
+        "bioc:application-id": {
+            "title": "Application Identifier",
+            "description": "This tag identifies a specific application that is uniquely served by this resource",
+            "$comment": "TODO Define application. Specify format",
+            "topic": "workload",
+            "type": "string",
+            "examples": [
+                {
+                    "bioc:application-id": "TODO"
+                }
+            ]
+        },
+        "bioc:environment": {
+            "title": "The execution environment",
+            "description": "The execution context. For example, production, testing,  or development",
+            "topic": "workload",
+            "type": "string",
+            "enum": [
+                "production",
+                "staging",
+                "test",
+                "development",
+                "experimental"
+            ],
+            "examples": [
+                {
+                    "bioc:environment": "production"
+                }
+            ]
+        },
+        "bioc:availability": {
+            "title": "Availability Category",
+            "description": "Availability category indicates the relative importance of having the system on line and available for its users",
+            "topic": "processing",
+            "type": "string",
+            "enum": [
+                "critical",
+                "high",
+                "medium",
+                "low",
+                "none"
+            ],
+            "examples": [
+                {
+                    "bioc:availability": "high"
+                }
+            ]
+        },
+        "bioc:retain-until": {
+            "title": "Expiration date",
+            "description": "Do not deaccession, shutdown or deprecate the resource before this date.",
+            "topic": "processing",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                {
+                    "bioc:retain-until": "2024-12-31"
+                }
+            ]
+        },
+        "bioc:recovery-objective:point": {
+            "title": "RPO. Recovery point objective,",
+            "description": "The maximum data loss that this systemp can tolerate without significant impact, measured as a time interval. For example if the system fails catastropyically at 9:00, a RPO of 30 minutes (P30M) implies that in the worst-case scenario, the system must be able to recover all the system data at up through 8:30",
+            "topic": "processing",
+            "type": "string",
+            "format": "duration",
+            "examples": [
+                {
+                    "bioc:recovery-objective:point": "P30M"
+                }
+            ]
+        },
+        "bioc:recovery-objective:time": {
+            "title": "RTO. Recovery time objective",
+            "description": "The maximum down-time duration that this systems or processes that depend on this resource can tolerate without significant impact. For example, an RTO of 1 hour (P1H) means that after a catastrophic failure at 11:20, the system must be back in operation no later than 12:20.",
+            "topic": "processing",
+            "type": "string",
+            "format": "duration",
+            "examples": [
+                {
+                    "bioc:recovery-objective:point": "P1H"
+                }
+            ]
+        },
+        "bioc:notes": {
+            "title": "General notes",
+            "description": "Free-form text attached to the resource.",
+            "topic": "processing",
+            "type": "array",
+            "itens": {
+                "type": "string"
+            },
+            "examples": [
+                {
+                    "bioc:notes": [
+                        "This snapshot was made immmediately before the special WAHMO conversion process of 12/25/23.",
+                        "See Henry Charles Smith for additonal information"
+                    ]
+                }
+            ]
+        }
+    }
+}
