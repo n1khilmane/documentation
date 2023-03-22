@@ -112,16 +112,10 @@
             "title": "General notes",
             "description": "Free-form text attached to the resource.",
             "topic": "processing",
-            "type": "array",
-            "itens": {
-                "type": "string"
-            },
+            "type": "string",
             "examples": [
                 {
-                    "bioc:notes": [
-                        "This snapshot was made immmediately before the special WAHMO conversion process of 12/25/23.",
-                        "See Henry Charles Smith for additonal information"
-                    ]
+                    "bioc:notes": "This snapshot was made immmediately before the special WAHMO conversion process on 12/25/23. See Henry Charles Smith for additonal information."
                 }
             ]
         }
