@@ -10,29 +10,37 @@
        </thead>
        <tbody>
               {{ range $id, $val := .Site.Data.resource_tags.properties }}
-              <tr>
-                     <td style="text-align:left">{{ $id }}</td>
+              <tr style=" background-color:white; border:2px solid black !important; border-top-style:solid !important; border-left-style:none !important; border-right-style:none !important; border-bottom-style:none !important" >
+                     <td style="text-align:left" rowspan="3">{{ $id }}</td>
                      <td style="text-align:left">{{ $val.topic }}</td>
-                     <td style="text-align:left">{{ $val.type }}</td>
-                     <td style="text-align:left">{{ $val.format }}
-                    </td>
+                     <td style="text-align:left">
+                            {{ $val.type }}
+                     </td>
+                     <td style="text-align:left">{{ $val.format }}</td>
                      <td style="text-align:left">{{ $val.title }}</td>
               </tr>
+<!-- TODO expose this
               {{ with $val.enum }}
-              <td></td>
-              <td style="text-align:right">enum:</td>
-              <td colspan="3" style="text-align:left">{{ $val.enum }}</td>
+              <td style="text-align:left">enum:</td>
+              <td colspan="4" style="text-align:left">{{ $val.enum }}</td>
               {{ end }}
+-->
 
-
-              <tr>
+              <tr style="background-color:white;">
                      <td style="text-align:left">description</td>
-                     <td style="text-align:left" , colspan="4">{{ $val.description }}</td>
+                     <td style="text-align:left" , colspan="4">
+                            {{ with $val.enum }}
+                            {{ $val.enum }}
+                            <br/>
+                            {{ end }}              
+                            {{ $val.description }}
+                     </td>
               </tr>
-              <tr>
+              <tr style="background-color:white; border-bottom-style:solid">
                      <td style="text-align:left">Example</td>
                      <td style="text-align:left" , colspan="4">{{ $val.examples | jsonify }} </td>
-              </tr>
+              </tr style="background-color:white">
               {{ end }}
+       
        </tbody>
 </table>
