@@ -1,4 +1,4 @@
-module github.com/google/docsy-example
+module github.com/bioconductor/bioc-core-sops
 
 go 1.19
 
