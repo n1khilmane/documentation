@@ -1,4 +1,5 @@
 ---
+date: 2021-05-03
 title: "Bioconductor Mirrors and RSync Access"
 linkTitle: "Mirros and RSync"
 description: This document contains instructions for adding mirrors and rsync access.

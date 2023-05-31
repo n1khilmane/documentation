@@ -1,4 +1,5 @@
 ---
+date: 2018-08-07
 title: "Logging in AWS"
 linkTitle: "Logging"
 description: This document describes logging procedures for key applications running on our EC2 instances and a few other AWS services. This is a work in progress ...

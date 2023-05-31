@@ -1,4 +1,5 @@
 ---
+date: 2018-08-09
 title: "EC2 Backups"
 linkTitle: "EC2 Backups"
 description: This document describes the backup schedule and procedure for the the Bioconductor productio EC2 instances in AWS region `us-east-1`

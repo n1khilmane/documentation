@@ -1,4 +1,5 @@
 ---
+date: 2018-08-22
 title: "Bioconductor mail delivery"
 linkTitle: "bioc mail"
 description: This document describes the configuration and set-up for the `delivery.bioconductor.org` EC2 instance. 

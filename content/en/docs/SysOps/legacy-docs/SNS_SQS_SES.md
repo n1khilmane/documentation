@@ -1,4 +1,5 @@
 ---
+date: 2021-02-23
 title: "Amazon SNS, SQS and SES"
 linkTitle: "SNS, SQS, SES"
 description: This document describes the Amazon Simple Notification Service (SNS), Simple Queue Service (SQS) and Simple Email Service (SES) used in our account as of March 2018.

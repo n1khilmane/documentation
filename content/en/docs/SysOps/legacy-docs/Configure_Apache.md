@@ -1,4 +1,5 @@
 ---
+date: 2017-06-01
 title: "Bioc Apache setup"
 linkTitle: "Apache setup"
 description: This not a comprehensive guide but more of a top-level overview of how Apache can be installed and configured to support SSL. There are many good resources on the web with more detail.

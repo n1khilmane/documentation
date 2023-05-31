@@ -1,4 +1,5 @@
 ---
+date: 2019-11-06
 title: "Bioconductor hosted AMIs"
 linkTitle: "Bioc AMIs"
 description: Creating Bioconductor AMIs

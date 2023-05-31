@@ -1,4 +1,5 @@
 ---
+date: 2019-08-15
 title: "Resizing EC2 instances"
 linkTitle: "Resizing instances"
 description: This document describes the steps in resizing an EC2 instance.

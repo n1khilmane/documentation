@@ -1,4 +1,5 @@
 ---
+date: 2021-08-25
 title: "Updating and managing EC2 instances"
 linkTitle: "EC2 server updates"
 description: This document briefly describes the key services running on the EC2 instances and any special-case treatment necessary when performing system updates.

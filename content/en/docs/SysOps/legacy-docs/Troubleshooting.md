@@ -1,4 +1,5 @@
 ---
+date: 2019-05-14
 title: "Troubleshooting"
 linkTitle: "Troubleshooting"
 description: This document is to keep track of general trouble shooting for any AWS related project or service. 
