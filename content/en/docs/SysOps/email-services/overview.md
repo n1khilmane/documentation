@@ -3,11 +3,11 @@ title: "Overview"
 linkTitle: "Overview"
 weight: 10
 description: >
-  Email services within the `ioconductor.org` core infrastruicture
+  Email services within `bioconductor.org` core infrastructure
 ---
 The are no full-featured mail servers assocaited with the `bioconductor.org` domain. However, we provide two limited-purpose services:
-- Email forwarding from bioconductor aliases
-- Message delivery from internal services, including BBS and `support.bioconductor.org`.
+- [Email forwarding](../email-forwarding) from bioconductor aliases
+- [Message delivery](../outbound-email) from internal services, including BBS and `support.bioconductor.org`.
 
 Our mail forwarding servers have been designed have a high level of availability and reliabiliy without human intervention. Nonetheless, their healthy operation requires survenlance.
 
