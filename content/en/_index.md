@@ -2,20 +2,30 @@
 title: "BiocCoreSops"
 linkTitle: "BiocSops"
 ---
-{{< blocks/section color="dark" type="row" >}}
+{{< blocks/section color="white" >}}
 
-{{% blocks/feature  icon="fa-newspaper" title="Recent News" %}}
+{{< blocks/feature  icon="fa-newspaper" title="Recent News" >}}
 
-{{% /blocks/feature %}}
+{{< page-list path="/blog/news" >}}
 
+{{< /blocks/feature >}}
 
 {{% blocks/feature icon="fa-book" title="Latest Documents" %}}
-[Email Services](docs/sysops/email-services/)
+
+{{< page-list path="/docs" >}}
+
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-bolt" title="Quick Links" %}}
-[Core Team](docs/governance/contacts/)
+<p style="text-align:left;margin-bottom:0;">
+    <a href="/docs/governance/contacts">Core Team</a>
+</p>
+<p style="text-align:left;margin-bottom:0;">
+    <a href="/docs/governance/resource-tages">Resource Tag Taxonomy</a>
+</p>
+
 {{% /blocks/feature %}}
+
 {{< /blocks/section >}}
 
 {{% pageinfo %}}

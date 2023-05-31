@@ -1,0 +1,11 @@
+{{ $path := .Get "path" }}
+{{ with .Site.GetPage $path }}
+  {{ range (first 5 .RegularPagesRecursive.ByDate.Reverse) }}
+  <p style="text-align:left;margin-bottom:0;">
+    {{ .Date | time.Format ":date_short" }}
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+</p>
+{{ end }}
+{{ end }}
+<p><a href="{{ $path }}">more...</a></p>
+
