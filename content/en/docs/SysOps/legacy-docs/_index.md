@@ -1,4 +1,5 @@
 ---
+date: 2023-04-28
 title: "Legacy SysOps Documents"
 linkTitle: "Legacy Docs"
 weight: 80
