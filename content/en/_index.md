@@ -21,7 +21,7 @@ linkTitle: "BiocSops"
     <a href="/docs/governance/contacts">Core Team</a>
 </p>
 <p style="text-align:left;margin-bottom:0;">
-    <a href="/docs/governance/resource-tages">Resource Tag Taxonomy</a>
+    <a href="/docs/governance/resource-tags">Resource Tag Taxonomy</a>
 </p>
 
 {{% /blocks/feature %}}
