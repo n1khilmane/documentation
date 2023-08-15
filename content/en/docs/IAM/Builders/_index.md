@@ -29,7 +29,7 @@ Never disclose your SSH private key to anyone.{{% /alert %}}
 
 Once your public key has been added to the DFCI network and your private key is on your system with mode 600, you may access the Builder with the following command 
 
-```{bash}
+```bash
 ssh -A -J <User>@<JumpServer>.dfci.harvard.edu <BiocName>@<BuilderIp>
 ```
 
@@ -37,7 +37,7 @@ ssh -A -J <User>@<JumpServer>.dfci.harvard.edu <BiocName>@<BuilderIp>
 
 User `rfranklin` wishes to `ssh` to `nebbiolo1` with the local identity `biocbuild`.
 
-```{bash}
+```bash
 ssh -A -J rfranklin@ada.dfci.harvard.edu biocbuild@155.52.47.135
 ```
 
