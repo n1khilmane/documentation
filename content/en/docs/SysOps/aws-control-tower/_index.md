@@ -12,5 +12,6 @@ This document is preliminary.
 The Bioconductor Core Team's adoption of AWS Organizaitons and Cotrol Tower is in the Proof of Concept Stage.
 {{% /pageinfo %}}
 
-<h5>[Control Tower](https://docs.aws.amazon.com/controltower/latest/userguide/what-is-control-tower.html)</h5>
-<p>An introduction to AWS Control Tower</p>
+### An introduction to AWS Control Tower
+
+What is AWS [Control Tower](https://docs.aws.amazon.com/controltower/latest/userguide/what-is-control-tower.html)?
