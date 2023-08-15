@@ -58,11 +58,9 @@ anchor = "smart"
 
 # Language configuration
 
-[languages]
-[languages.en]
 title = "Bioconductor Core SOPs"
+languageCode = "en-us"
 description = "Bioconductor Core Group Internal SOPs"
-languageName ="English"
 # Weight used for sorting.
 weight = 1
 
