@@ -1,5 +1,6 @@
 ---
 title: "Bitwarden Overview"
+date: 2023-02-01
 linkTitle: "Bitwarden Overview"
 weight: 20
 tags: []

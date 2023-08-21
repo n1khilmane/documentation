@@ -1,5 +1,6 @@
 ---
 title: "Core SOPs Website SysOps"
+date: 2023-02-28
 linkTitle: "Core SOPs site"
 weight: 10
 description: "System Documentation for coresops.bioconductor.org"

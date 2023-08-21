@@ -1,5 +1,6 @@
 ---
 title: "Adding a Time-based One-time Password With Automatic Bitwarden Authentication"
+date: 2023-02-01
 linkTitle: "Adding a TOTP"
 weight: 50
 description: >

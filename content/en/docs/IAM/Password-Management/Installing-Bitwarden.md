@@ -1,5 +1,6 @@
 ---
 title: "Installing Bitwarden"
+date: 2023-02-23
 linkTitle: "Installing Bitwarden"
 weight: 30
 tags: []

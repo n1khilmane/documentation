@@ -1,5 +1,6 @@
 ---
 title: "BiocCoreSops"
+date: 2023-06-09
 linkTitle: "BiocSops"
 ---
 {{< blocks/section color="white" >}}
