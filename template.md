@@ -3,13 +3,13 @@
 
 policy / standard / procedure / guideline
 
-Policies are formal statements produced and supported by senior management. 
+Policies are formal statements produced and supported by executive authority. 
 
 Standards are mandatory courses of action or rules that give formal policies support and direction.
 
 Procedures are detailed step-by-step instructions to achieve a given goal or mandate. 
 
-Guidelines are recommendations to users when specific standards do not apply.
+Guidelines are recommendations to users beyond the scope of standards.
 
 ### doc #
 ### version
