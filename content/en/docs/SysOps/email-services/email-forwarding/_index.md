@@ -1,9 +1,7 @@
 ---
-date: 2023-08-31
+date: 2023-08-20
 title: "Email forwarding service"
 linkTitle: "Email forwarding"
-weight: 20
-draft: true
 description: >
   Forwardemmail.net processes email messages sent to bioconductor.org. For defined aliases, the mail is forwarded to a static list of interested parties.
 ---
