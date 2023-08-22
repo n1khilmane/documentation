@@ -118,6 +118,21 @@
                     "bioc:notes": "This snapshot was made immmediately before the special WAHMO conversion process on 12/25/23. See Henry Charles Smith for additonal information."
                 }
             ]
+        },
+        "bioc:managed-by": {
+            "title": "Managed by",
+            "description": "The configuration maangement tool that creaated this resource",
+            "topic": "configuration",
+            "type": "string",
+            "enum": [
+                "cloudformation",
+                "terraform"
+            ],
+            "examples": [
+                {
+                    "bioc:managed-by": "terraform"
+                }
+            ]
         }
     }
 }
