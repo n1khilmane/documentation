@@ -1,5 +1,5 @@
 ---
-title: "Aws Modernization Preview"
+title: "AWS Modernization Preview"
 date: 2023-08-21
 draft: false
 author: "Robert Shear"

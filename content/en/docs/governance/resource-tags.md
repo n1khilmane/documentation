@@ -9,10 +9,9 @@ description: >
 
 
 {{% pageinfo %}}
-This document is an incomplete discussion draft. Comments and suggestions are welcome.
+2023-08-22: `bioc:managed-by` added, topic `roles` changed to `configuration`.
 
-Th table at the bottom of this page is generated automatically from `data/resource_tags.json`.
-It will be sorted and reformatted as the tagging scheme evolves. (rds)
+The resource tags are stored as a json file located in the [bioc-core-sops repo](https://github.com/Bioconductor/bioc-core-sops/blob/main/data/resource_tags.json).
 {{% /pageinfo %}}
 
 The Bioconductor Core standardized scheme for describing the characteristics of cloud resources used by the Bioconductor Core Team.
@@ -32,9 +31,13 @@ All identifiers must be lowercase and comprise one or more English language word
 Dates and time intervals will conform to ISO 8601. 
 
 
-### Roles
+### Configuration
 
-These tags identify security principals (usually users) that have a specific current relationship with the resource to which the tag is attached.
+Configuration tags specify characteristics of the the genesis, management, and lifecycle management of the resource. Where the configuration is managed by a configuration management tool, the `bioc:managed-by` tag indicates the tool source.
+
+#### Roles
+
+The tags `bioc:managed-by` and `bioc:created-by` identify security principals (usually users) that have a specific current relationship with the resource to which the tag is attached.
 For AWS resources, users with established IAM accounts within the Bioconductor AWS account (555219204010) will be identified as `iam-user-name@biocondcutor`.
 Example: `lori.shepherd@bioconductor`.
 For cross-account users, the user will be identified by their Amazon Resource Name. Example. User Luke_Skywalker who has cross-account permissions from account 999999997, will be identified as `arn:aws:iam::999999997:user/Luke_Skywalker`.

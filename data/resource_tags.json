@@ -5,7 +5,7 @@
         "bioc:owner": {
             "title": "User responsible for this resource",
             "description": "The user's IAM user name with the suffix @bioconductor.",
-            "topic": "roles",
+            "topic": "configuration",
             "type": "string",
             "examples": [
                 {
@@ -16,7 +16,7 @@
         "bioc:creator": {
             "title": "User who created this resource, if created manually",
             "description": "The user's IAM user name with the suffix @bioconductor.",
-            "topic": "roles",
+            "topic": "configuration",
             "type": "string",
             "examples": [
                 {
@@ -121,7 +121,7 @@
         },
         "bioc:managed-by": {
             "title": "Managed by",
-            "description": "The configuration maangement tool that creaated this resource",
+            "description": "The configuration mangement tool that created this resource",
             "topic": "configuration",
             "type": "string",
             "enum": [
