@@ -1,7 +1,8 @@
 ---
 title: "Updating BiocAnVIL containers"
-linkTitle: "AnVIL Containers"
+linktitle: "AnVIL Containers"
 weight: 10
+date: 2023-08-23
 description: "Step-by-step information on how to update the containers that are Bioconductor's responsibility for the AnVIL project"
 ---
 

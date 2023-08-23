@@ -3,7 +3,7 @@ title: "AWS Modernization Drafts"
 linkTitle: "AWS Modernization"
 date: 2023-08-21
 weight: 5
-author: 
+author: Robert Shear
 description: >
     Draft documentation generated as part of the AWS modernization effort.
 
