@@ -1,7 +1,7 @@
 ---
 title: "Identity and Access Directory Selection Design Brief"
 date: 2023-08-29
-draft: true
+draft: false
 author: Robert Shear
 description: >
     This note describe the rationale for selecting AwS Identity Center directory as the identity source for the AWS Modeernization Project (AMP23)
