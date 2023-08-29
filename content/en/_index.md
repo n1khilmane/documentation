@@ -5,9 +5,9 @@ linkTitle: "BiocSops"
 ---
 {{< blocks/section color="white" >}}
 
-{{< blocks/feature  icon="fa-newspaper" title="Recent News" >}}
+{{< blocks/feature  icon="fa-newspaper" title="Recent Blog Posts" >}}
 
-{{< page-list path="/blog/news" >}}
+{{< page-list path="/blog" >}}
 
 {{< /blocks/feature >}}
 
