@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes Resources"
-linkTitle: "Kubernetes Resources"
+linkTitle: "Kubernetes"
 weight: 10
 date: 2023-08-23
 author: Alex Mahmoud

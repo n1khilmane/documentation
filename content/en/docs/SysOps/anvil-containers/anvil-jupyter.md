@@ -2,6 +2,7 @@
 title: "Updating BiocAnVIL Jupyter container"
 linkTitle: "BiocAnVIL Jupyter SOP"
 date: 2023-08-23
+author: Alex Mahmoud
 description: "Instructions from shared SOP with Broad Institute, on needed process to update BiocAnVIL Jupyter container"
 ---
 

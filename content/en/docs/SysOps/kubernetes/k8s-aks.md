@@ -2,6 +2,7 @@
 title: "Getting started with the Azure Kubernetes Service"
 linktitle: "K8S AKS"
 date: 2023-08-23
+author: Alex Mahmoud
 description: "A practical guide to getting started with Kubernetes on Azure for Bioconductor."
 ---
 
