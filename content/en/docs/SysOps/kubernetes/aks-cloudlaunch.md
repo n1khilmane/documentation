@@ -57,7 +57,7 @@ kubectl config use-context bioc-aug2023-aks
 ```
 
 ## Deploying CloudLaunch
-<strong>THE CODE BELOW REQUIRES PASTING CONTENT FROM BITWARDEN.</strong>
+<strong>THE CODE BELOW REQUIRES PASTING CONTENT FROM BITWARDEN.</strong> Take note of the admin password, as it will be needed in the next step.
 CloudLaunch values include sensitive information, including database secrets. The [CloudLaunch Helm Chart](https://github.com/CloudVE/cloudlaunch-helm) is used, with `--version 0.6.0` as of Aug 2023.
 You may note the values include a mention of js2launch.bioconductor.org at various points. You may `sed` them all for a new ingress to deploy a side server at a subdomain.
 
@@ -78,4 +78,41 @@ rm js2launch.vals
 
 Deployment will take a few minutes, as a postgres database needs to first be deployed and created before the API and UI pods get started. After a few minutes, the CloudLaunch app should be available at the chosen subdomain.
 
+
+## Configuration
+After Cloudlaunch is up and running, you must add Cloud and Application configuration to make it usable. You can do so at the admin dashboard at the [`/cloudlaunch/admin`](https://js2launch.bioconductor.org/cloudlaunch/admin) path, where you can login with username `admin` and the password seen in the values copied from the Bitwarden vault.
+
+You can then first head to the [Cloud section](https://js2launch.bioconductor.org/cloudlaunch/admin/djcloudbridge/cloud/) in the admin panel, and click on the Add Cloud button in the top right corner as shown in the screenshot below.
+
+![CloudLaunch Add Cloud button in admin panel](images/cloudlaunch-add-cloud.png)
+
+Then choose an OpenStack cloud, and advance to the configuration. You may see the Jetstream 2 configuration as of August 2023 in the screenshot below.
+
+![CloudLaunch JS2 Admin Panel Aug 2023](images/cloudlaunch-js2-cloud-details.png)
+
+
+You must then advance to the [User Profiles section](https://js2launch.bioconductor.org/cloudlaunch/admin/djcloudbridge/userprofile/) to add credentials for the newly added cloud. You may add credentials to the `admin` user which will be used by default in CloudLaunch. Make sure to add credentials under the OpenStack section.
+These credentials can be generated from the [OpenStack Jetstream2 portal at js2.jetstream-cloud.org](https://js2.jetstream-cloud.org/) by going to the Application Credentials section under Identity tab, as shown in the screenshot below.
+
+![Jetstream2 creating application credentials](images/js2-app-creds.png)
+
+After generating and adding the application credentials to the CloudLaunch user profile, the next step is to add an image for the Ubuntu20 VM image, currently used for the Jetstream2 RKE cluster. You may do so under the [Images section](https://js2launch.bioconductor.org/cloudlaunch/admin/cloudlaunch/image/) in the admin portal, and clicking on the Add Image button in the top right corner, as shown in the screenshot below.
+
+![CloudLaunch admin panel Add Image button](images/cloudlaunch-add-image.png)
+
+An updated Image ID must be retrieved from the Jetstream2 OpenStack portal, which can be found under the Images section under the Compute tab, as shown in the screenshot below.
+
+![Jetstream2 images page](images/js2-images.png)
+
+After clicking on the desired image name, the ID can be copied from the first field in the image details, as shown in the screenshot below.
+
+![Jetstream2 image ID example](images/js2-image-id.png)
+
+After copying the image ID, head back the the Add Image page in CloudLaunch admin panel, and add the pasted ID along with the rest of the configuration as shown below.
+
+![CloudLaunch admin panel ubuntu details](images/cloudlaunch-image-details.png)
+
+The final step is setting up CloudLaunch is creating the CloudMan Boot application which will launch the RKE clusters on Jetstream2. Luckily this configuration can be imported and does not need to be manually filled. However, a first application must be added before one can be imported, so start by heading the the [Applications section](https://js2launch.bioconductor.org/cloudlaunch/admin/cloudlaunch/application/) in the admin panel and click on Add Application button in the top right corner. You can then populate the name with a dummy value such as `test` and leave its configuration blank. You can then select the newly added application and choose to Import app data from a URL as shown in the screenshot below, and paste the following URL `https://gist.githubusercontent.com/almahmoud/a9de4094188ca66bf8fa4676eb48a253/raw/c78f8af184db1cf74109cd388a4ebd8c1b781ef2/app-registry.yaml` to import the Kubernetes app for Bioconductor.
+
+![CloudLaunch import app page](images/cloudlaunch-import-apps.png)
 
