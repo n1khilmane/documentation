@@ -19,6 +19,11 @@ This document was created in the context of exploring usage of AKS within the Mi
 
 This document assumes that you have the Azure CLI installed, that you are logged in (`az login`), and that you have access to the `bioconductor` resource group. See [Microsoft's documentation on installing the Azure CLI for your operating system](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
 
+You must also have `kubectl` installed, which might have already been installed by another software (eg: Azure, AWS, Docker). You may check with `kubectl --version`, and follow the [Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/) to install `kubectl` on your Operating System (or re-install, which is recommended if your Client version is under 1.24).
+
+Additionally, `helm` is required for installing groups of Kubernetes reources bundled as applications. You may follow the [Helm documentation](https://helm.sh/docs/intro/install/) to install, and use `helm version` to check.
+
+
 ## Connecting to an AKS cluster
 
 ### Creating a cluster (not often needed)
@@ -37,10 +42,15 @@ CLUSTER_NAME=bioc-aug2023-aks
 az aks get-credentials -g $RESOURCE_GROUP -n $CLUSTER_NAME
 ```
 
-#### Switing contexts
-The above command merges and AKS kubeconfig into your kubeconfig context. You can switch back and forth between it, docker-desktop cluster, and an RKE Jetstream cluster (generally named `local`) by switching contexts. See the [cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration) for more helpful config commands.
+#### Switching contexts
+The above command merges an AKS kubeconfig into your machine's `~/.kubec/config` file, which can include multiple "contexts", each representing a connection to a cluster. You can switch back and forth between AKS, docker-desktop cluster, and an RKE Jetstream cluster (generally named `local`) by switching contexts. See the [cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration) for more helpful config commands.
 
-Notably, you can see contexts with `kubectl config get-contexts` and switch contexts with
+Notably, you can see current available contexts with 
+```
+kubectl config get-contexts
+```
+
+and switch contexts with
 ```
 # Switch to AKS
 kubectl config use-context bioc-aug2023-aks
@@ -123,7 +133,7 @@ EOF
 helm upgrade cert-manager jetstack/cert-manager --install --create-namespace --wait --namespace cert-manager --set installCRDs=true -f cert-manager.vals
 ```
 
-In order to be able to generate wildcard certificates, an authenticated Cluster Issuer is needed. THE CODE BELOW REQUIRES PASTING SOME CONTENT FROM BITWARDEN.
+In order to be able to generate wildcard certificates, an authenticated Cluster Issuer is needed. <strong>THE CODE BELOW REQUIRES PASTING SOME CONTENT FROM BITWARDEN.</strong>
 
 ```
 cat << "EOF" > cert-manager-secrets.yaml
@@ -163,7 +173,7 @@ EOF
 kubectl apply -n cert-manager -f cert-manager-clusterissuer-ssl-wildcard.yaml
 ```
 
-An NGINX ingress controller will allow a variety of subdomains to easily be routed to the same cluster address, load balanced across all cluster nodes, and then routed to the appropriate application based on ingress resources defined in the cluster. Along with `cert-manager`, this will allow for out-of-the box definition of any ingress endpoint in seconds!
+An [NGINX ingress controller](https://kubernetes.github.io/ingress-nginx) will allow a variety of subdomains to easily be routed to the same cluster address, load balanced across all cluster nodes, and then routed to the appropriate application based on ingress resources defined in the cluster. Along with `cert-manager`, this will allow for out-of-the box definition of any ingress endpoint in seconds!
 
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
