@@ -37,13 +37,16 @@ First, head to the [AWS Console at console.aws.amazon.com](https://console.aws.a
 
 You can then head to the [Route 53 Hosted Zones](https://console.aws.amazon.com/route53/v2/hostedzones) where you should see the `bioconductor.org` domain like the screenshot below.
 
-![Expected Route 53 overview page showing bioconductor.org Hosted Zone](images/route-53-zone.png)
+{{ $image := .Resources.GetMatch "k8s-images/route-53-zone.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="Expected Route 53 overview page showing bioconductor.org Hosted Zone">
 
 After clicking on the domain, you should see a list of subdomains and have the ability to create a record. For an AKS cluster, the subdomain must use a CNAME type record, pointing to the `cloudapp.azure.com` domain of the ingress controller. For an RKE Jetstream cluster, the subdomain must use an A record type, pointing to the IP address of the cluster head node. The below screenshots show an example of a record for a dev cloudlaunch instance on the existing AKS cluster.
 
 
-![Expected Route 53 page showing Create a Record button in the bioconductor.org Hosted Zone](images/route-53-create-record.png)
-![Example Route 53 record details for AKS cluster](images/route-53-record-details.png)
+{{ $image := .Resources.GetMatch "k8s-images/route-53-create-record.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="Expected Route 53 page showing Create a Record button in the bioconductor.org Hosted Zone">
+{{ $image := .Resources.GetMatch "k8s-images/route-53-record-details.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="Example Route 53 record details for AKS cluster">
 
 
 ## Connecting to an AKS cluster
@@ -84,35 +87,43 @@ After Cloudlaunch is up and running, you must add Cloud and Application configur
 
 You can then first head to the [Cloud section](https://js2launch.bioconductor.org/cloudlaunch/admin/djcloudbridge/cloud/) in the admin panel, and click on the Add Cloud button in the top right corner as shown in the screenshot below.
 
-![CloudLaunch Add Cloud button in admin panel](images/cloudlaunch-add-cloud.png)
+{{ $image := .Resources.GetMatch "k8s-images/cloudlaunch-add-cloud.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="CloudLaunch Add Cloud button in admin panel">
 
 Then choose an OpenStack cloud, and advance to the configuration. You may see the Jetstream 2 configuration as of August 2023 in the screenshot below.
 
-![CloudLaunch JS2 Admin Panel Aug 2023](images/cloudlaunch-js2-cloud-details.png)
+{{ $image := .Resources.GetMatch "k8s-images/cloudlaunch-js2-cloud-details.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="CloudLaunch JS2 Admin Panel Aug 2023">
 
 
 You must then advance to the [User Profiles section](https://js2launch.bioconductor.org/cloudlaunch/admin/djcloudbridge/userprofile/) to add credentials for the newly added cloud. You may add credentials to the `admin` user which will be used by default in CloudLaunch. Make sure to add credentials under the OpenStack section.
 These credentials can be generated from the [OpenStack Jetstream2 portal at js2.jetstream-cloud.org](https://js2.jetstream-cloud.org/) by going to the Application Credentials section under Identity tab, as shown in the screenshot below.
 
-![Jetstream2 creating application credentials](images/js2-app-creds.png)
+{{ $image := .Resources.GetMatch "k8s-images/js2-app-creds.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="Jetstream2 creating application credentials">
 
 After generating and adding the application credentials to the CloudLaunch user profile, the next step is to add an image for the Ubuntu20 VM image, currently used for the Jetstream2 RKE cluster. You may do so under the [Images section](https://js2launch.bioconductor.org/cloudlaunch/admin/cloudlaunch/image/) in the admin portal, and clicking on the Add Image button in the top right corner, as shown in the screenshot below.
 
-![CloudLaunch admin panel Add Image button](images/cloudlaunch-add-image.png)
+{{ $image := .Resources.GetMatch "k8s-images/cloudlaunch-add-image.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="CloudLaunch admin panel Add Image button">
 
 An updated Image ID must be retrieved from the Jetstream2 OpenStack portal, which can be found under the Images section under the Compute tab, as shown in the screenshot below.
 
-![Jetstream2 images page](images/js2-images.png)
+{{ $image := .Resources.GetMatch "k8s-images/js2-images.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="Jetstream2 images page">
 
 After clicking on the desired image name, the ID can be copied from the first field in the image details, as shown in the screenshot below.
 
-![Jetstream2 image ID example](images/js2-image-id.png)
+{{ $image := .Resources.GetMatch "k8s-images/js2-image-id.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="Jetstream2 image ID example">
 
 After copying the image ID, head back the the Add Image page in CloudLaunch admin panel, and add the pasted ID along with the rest of the configuration as shown below.
 
-![CloudLaunch admin panel ubuntu details](images/cloudlaunch-image-details.png)
+{{ $image := .Resources.GetMatch "k8s-images/cloudlaunch-image-details.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="CloudLaunch admin panel ubuntu details">
 
 The final step is setting up CloudLaunch is creating the CloudMan Boot application which will launch the RKE clusters on Jetstream2. Luckily this configuration can be imported and does not need to be manually filled. However, a first application must be added before one can be imported, so start by heading the the [Applications section](https://js2launch.bioconductor.org/cloudlaunch/admin/cloudlaunch/application/) in the admin panel and click on Add Application button in the top right corner. You can then populate the name with a dummy value such as `test` and leave its configuration blank. You can then select the newly added application and choose to Import app data from a URL as shown in the screenshot below, and paste the following URL `https://gist.githubusercontent.com/almahmoud/a9de4094188ca66bf8fa4676eb48a253/raw/c78f8af184db1cf74109cd388a4ebd8c1b781ef2/app-registry.yaml` to import the Kubernetes app for Bioconductor.
 
-![CloudLaunch import app page](images/cloudlaunch-import-apps.png)
+{{ $image := .Resources.GetMatch "k8s-images/cloudlaunch-import-apps.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="CloudLaunch import app page">
 

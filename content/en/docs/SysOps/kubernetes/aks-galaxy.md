@@ -38,19 +38,23 @@ First, head to the [AWS Console at console.aws.amazon.com](https://console.aws.a
 
 You can then head to the [Route 53 Hosted Zones](https://console.aws.amazon.com/route53/v2/hostedzones) where you should see the `bioconductor.org` domain like the screenshot below.
 
-![Expected Route 53 overview page showing bioconductor.org Hosted Zone](images/route-53-zone.png)
+{{ $image := .Resources.GetMatch "k8s-images/route-53-zone.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="Expected Route 53 overview page showing bioconductor.org Hosted Zone">
 
 After clicking on the domain, you should see a list of subdomains and have the ability to create a record. For an AKS cluster, the subdomain must use a CNAME type record, pointing to the `cloudapp.azure.com` domain of the ingress controller. For an RKE Jetstream cluster, the subdomain must use an A record type, pointing to the IP address of the cluster head node. The below screenshots show an example of a record for a Jetstream RKE cluster.
 
 
-![Expected Route 53 page showing Create a Record button in the bioconductor.org Hosted Zone](images/route-53-create-record.png)
+{{ $image := .Resources.GetMatch "k8s-images/route-53-create-record.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="Expected Route 53 page showing Create a Record button in the bioconductor.org Hosted Zone">
 
 
 Galaxy needs two routes, one for the main Galaxy web handler, i.e. the Galaxy UI at workshop.bioconductor.org, and a wildcard subdomain for the interactive environments. You may just use the wildcard *.workshop.bioconductor.org more generally or include the prefix for deployed interactive tools `its` in the subdomain.
  Both the main UI and the wildcard subdomain should be routed to the same destination, namely a CNAME route to the ingress controller's `cloudapp.azure.com` subdomain for AKS, or an A record to the IP address of the head node for a Jetstream RKE cluster.
 
-![Example Route 53 record details for RKE cluster, main UI](images/route-53-workshop-record.png)
-![Example Route 53 record details for RKE cluster, wildcard subdomain](images/route-53-workshop-wildcard.png)
+{{ $image := .Resources.GetMatch "k8s-images/route-53-workshop-record.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="Example Route 53 record details for RKE cluster, main UI">
+{{ $image := .Resources.GetMatch "k8s-images/route-53-workshop-wildcard.png" }}
+<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="Example Route 53 record details for RKE cluster, wildcard subdomain">
 
 ## Connecting to an AKS cluster
 The below command assumes proper permissions to the Azure namespace. You may follow the rest of the tutorial with another context (eg: Jetstream RKE) with slight modifications notably to the `storageClass`, and using the cluster head node's IP for the subdomain routing.
