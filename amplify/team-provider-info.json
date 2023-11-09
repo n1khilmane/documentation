@@ -11,5 +11,18 @@
       "StackId": "arn:aws:cloudformation:us-east-1:555219204010:stack/amplify-bioccoresops-dev-113412/d120c930-7f1d-11ee-84c2-0a3db223d459",
       "AmplifyAppId": "d3d0hh9fsfkdbi"
     }
+  },
+  "coresops": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bioccoresops-coresops-154815-authRole",
+      "UnauthRoleArn": "arn:aws:iam::555219204010:role/amplify-bioccoresops-coresops-154815-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::555219204010:role/amplify-bioccoresops-coresops-154815-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-bioccoresops-coresops-154815-deployment",
+      "UnauthRoleName": "amplify-bioccoresops-coresops-154815-unauthRole",
+      "StackName": "amplify-bioccoresops-coresops-154815",
+      "StackId": "arn:aws:cloudformation:us-east-1:555219204010:stack/amplify-bioccoresops-coresops-154815/4ed381b0-7f41-11ee-a550-0ae1f3a9af7b",
+      "AmplifyAppId": "d19lswpspdelbf"
+    }
   }
 }
