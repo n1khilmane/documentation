@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bioccoresops-dev-113412-authRole",
+      "UnauthRoleArn": "arn:aws:iam::555219204010:role/amplify-bioccoresops-dev-113412-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::555219204010:role/amplify-bioccoresops-dev-113412-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-bioccoresops-dev-113412-deployment",
+      "UnauthRoleName": "amplify-bioccoresops-dev-113412-unauthRole",
+      "StackName": "amplify-bioccoresops-dev-113412",
+      "StackId": "arn:aws:cloudformation:us-east-1:555219204010:stack/amplify-bioccoresops-dev-113412/d120c930-7f1d-11ee-84c2-0a3db223d459",
+      "AmplifyAppId": "d3d0hh9fsfkdbi"
+    }
+  }
+}
