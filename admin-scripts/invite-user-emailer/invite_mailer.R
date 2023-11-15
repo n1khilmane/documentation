@@ -3,21 +3,25 @@ library(jsonlite)
 library(tidyverse)
 library(lubridate)
 
-path_to_repo <- "~/bioc-core-sops"
+path_to_repo <- "~/Projects/bioc-core-sops"
 target_file <- "~/Downloads/invite_list.tsv"
+site_name = "bioc-core-sops"
+subscription = "25f05b47-1212-4dc5-b131-ddbe8c7b8c60"
+resource_group = "bioc-core-sops"
+
+site_desc = str_glue("-n {site_name} --subscription {subscription} --resource-group {resource_group}")
 
 create_invitation <- function(UserId, Provider = "GitHub") {
   x <- str_glue(
-    "az staticwebapp users invite -n bioc-core-sops --authentication-provider {Provider} --user-details {UserId} --role verified --domain coresops.bioconductor.org --invitation-expiration-in-hours 120 --output json"
+    "az staticwebapp users invite {site_desc} --user-details {UserId} --role verified --domain coresops.bioconductor.org --authentication-provider {Provider} --invitation-expiration-in-hours 120 --output json"
     )
   fromJSON(system(x, intern = TRUE))
-  
 }
 
 setwd(path_to_repo)
 
 coreteam <- fromJSON("data/members.json")
-list_users_cmd <- "az staticwebapp users list -n bioc-core-sops --output json"
+list_users_cmd <- str_glue("az staticwebapp users list {site_desc} --output json")
 currentmemebers <- fromJSON(system(list_users_cmd, intern = TRUE))
 
 # Invite everyone who doesn't already have a github identity
