@@ -13,13 +13,12 @@ description: "System Documentation for coresops.bioconductor.org"
 | Service | Parameter | Value |
 |---------|-----------|-------|
 | Github | repo | bioconductor/bioconductor |
-| Azure  | Subscription ID | 50e86e60-67ad-4bac-88aa-5eb26018eb1d |
-|| Subscription Name | MPN-B-eb1d |
-|| TenantI d | 95d4a3cd-3fb8-40c8-bdea-2e2b47e9a82f
+| Azure  | Subscription ID | 25f05b47-1212-4dc5-b131-ddbe8c7b8c60 |
+|| TenantId | e7fd2785-fa44-406f-8121-14a07ecb0e42 |
 | Azure Static Web App (SWA) | appName | bioc-core-sops |
 || resourceGroup | bioc-core-sops | bioc-core-sops |
-|| Internal domain | zealous-pond-0187fb310.2.azurestaticapps.net |
-|| External domain | coresops.bioconductor.org |
+|| Internal domain | victorious-wave-0b018b710.4.azurestaticapps.net |
+|| External domain | core-sops.bioconductor.org |
 || ARM template | ./swa_arm_template.json |
 
 ### Command Line Tools

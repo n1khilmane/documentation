@@ -4,6 +4,7 @@ library(tidyverse)
 library(lubridate)
 
 path_to_repo <- "~/Projects/bioc-core-sops"
+path_to_repo <- "~/Projects/bioc-core-sops"
 target_file <- "~/Downloads/invite_list.tsv"
 site_name = "bioc-core-sops"
 subscription = "25f05b47-1212-4dc5-b131-ddbe8c7b8c60"
