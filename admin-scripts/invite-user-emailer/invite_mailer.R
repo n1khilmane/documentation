@@ -13,7 +13,7 @@ site_desc = str_glue("-n {site_name} --subscription {subscription} --resource-gr
 
 create_invitation <- function(UserId, Provider = "GitHub") {
   x <- str_glue(
-    "az staticwebapp users invite {site_desc} --user-details {UserId} --role verified --domain coresops.bioconductor.org --authentication-provider {Provider} --invitation-expiration-in-hours 120 --output json"
+    "az staticwebapp users invite {site_desc} --user-details {UserId} --role verified --domain core-sops.bioconductor.org --authentication-provider {Provider} --invitation-expiration-in-hours 120 --output json"
     )
   fromJSON(system(x, intern = TRUE))
 }
