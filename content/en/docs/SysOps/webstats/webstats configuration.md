@@ -1,5 +1,5 @@
 ---
-date: 2023-08-20
+date: 2024-02-07
 title: "Webstats Configuration Details"
 linkTitle: "Webstats Config"
 description: >

@@ -1,7 +1,7 @@
 ---
 title: "Webstats for collecting and reporting package download statistics"
 linkTitle:  "Webstats"
-date: 2024-02-07T10:58:50-05:00
+date: 2024-02-07
 draft: true
 weight: 10
 draft: false
